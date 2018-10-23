@@ -1,0 +1,14 @@
+<%= form_for :game, :url => { :controller => 'games' } do |f| %>
+  Create New Game:
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :playercount %>
+    <%= f.select(:playercount, options_for_select([['Two',2], ['Three', 3], ['Four', 4], ['Five', 5], ['Six', 6]])) %>
+  </div>
+  <div>
+    <%= f.submit "Log In" %>
+  </div>
+<% end %>
